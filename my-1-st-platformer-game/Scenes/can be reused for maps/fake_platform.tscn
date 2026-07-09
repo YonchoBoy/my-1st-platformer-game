@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ycr7voivrcr0"]
 
-[ext_resource type="Texture2D" uid="uid://cwedi35yghaoa" path="res://Assets/Map Assets/platforms.png" id="1_87bhe"]
+[ext_resource type="Texture2D" uid="uid://cwedi35yghaoa" path="res://Assets/Map Assets/The Level Assets/platforms.png" id="1_87bhe"]
 
 [node name="Fake Platform" type="AnimatableBody2D" unique_id=423117889]
 

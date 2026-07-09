@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://dokg804uwvbcy"]
 
 [ext_resource type="PackedScene" uid="uid://bcl0hk66cy272" path="res://Scenes/can be reused for maps/kill_zone.tscn" id="1_jcebb"]
-[ext_resource type="Texture2D" uid="uid://rsa76s0rig7u" path="res://Assets/Map Assets/Brown.png" id="2_f3nwb"]
-[ext_resource type="Texture2D" uid="uid://bo0qhfbtix037" path="res://Assets/Map Assets/world_tileset.png" id="3_57lp3"]
+[ext_resource type="Texture2D" uid="uid://rsa76s0rig7u" path="res://Assets/Map Assets/Background Assets/Brown.png" id="2_f3nwb"]
+[ext_resource type="Texture2D" uid="uid://bo0qhfbtix037" path="res://Assets/Map Assets/The Level Assets/world_tileset.png" id="3_57lp3"]
 [ext_resource type="PackedScene" uid="uid://dguuctt8kp28f" path="res://Scenes/the mains/main_character.tscn" id="4_n5ptj"]
 [ext_resource type="PackedScene" uid="uid://ycr7voivrcr0" path="res://Scenes/can be reused for maps/fake_platform.tscn" id="5_77iba"]
 [ext_resource type="PackedScene" uid="uid://cgd5m5u12cspn" path="res://Scenes/can be reused for maps/platform.tscn" id="6_67y36"]
