@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ycr7voivrcr0" path="res://Scenes/can be reused for maps/fake_platform.tscn" id="5_77iba"]
 [ext_resource type="PackedScene" uid="uid://cgd5m5u12cspn" path="res://Scenes/can be reused for maps/platform.tscn" id="6_67y36"]
 [ext_resource type="PackedScene" uid="uid://07d66b07w617" path="res://Scenes/Collectables/coin.tscn" id="7_hk4vc"]
+[ext_resource type="PackedScene" uid="uid://bbwqnx7oqrhi3" path="res://Scenes/can be reused for maps/green_slime.tscn" id="8_8h4de"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kylad"]
 
@@ -204,6 +205,82 @@ _data = {
 &"RESET": SubResource("Animation_6ll4n")
 }
 
+[sub_resource type="Animation" id="Animation_8h4de"]
+resource_name = "Moving_The_Enemy"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(842, 470), Vector2(69, 470)]
+}
+
+[sub_resource type="Animation" id="Animation_jcebb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(842, 470)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f3nwb"]
+_data = {
+&"Moving_The_Enemy": SubResource("Animation_8h4de"),
+&"RESET": SubResource("Animation_jcebb")
+}
+
+[sub_resource type="Animation" id="Animation_f3nwb"]
+resource_name = "Jumpy Enemy"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1740, 221), Vector2(1533, 69), Vector2(1284, 224)]
+}
+
+[sub_resource type="Animation" id="Animation_57lp3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1740, 221)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n5ptj"]
+_data = {
+&"Jumpy Enemy": SubResource("Animation_f3nwb"),
+&"RESET": SubResource("Animation_57lp3")
+}
+
 [node name="Level 1" type="Node" unique_id=1653520689]
 
 [node name="KillZone" parent="." unique_id=394517152 instance=ExtResource("1_jcebb")]
@@ -266,3 +343,19 @@ position = Vector2(3188, 495)
 
 [node name="Coin5" parent="Collectables" unique_id=362543479 instance=ExtResource("7_hk4vc")]
 position = Vector2(2156, 523)
+
+[node name="Enemys" type="Node" parent="." unique_id=411091098]
+
+[node name="Green Slime" parent="Enemys" unique_id=670520269 instance=ExtResource("8_8h4de")]
+position = Vector2(842, 470)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemys/Green Slime" unique_id=2022086928]
+libraries/ = SubResource("AnimationLibrary_f3nwb")
+autoplay = &"Moving_The_Enemy"
+
+[node name="Green Slime2" parent="Enemys" unique_id=1929201390 instance=ExtResource("8_8h4de")]
+position = Vector2(1740, 221)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemys/Green Slime2" unique_id=31409706]
+libraries/ = SubResource("AnimationLibrary_n5ptj")
+autoplay = &"Jumpy Enemy"
