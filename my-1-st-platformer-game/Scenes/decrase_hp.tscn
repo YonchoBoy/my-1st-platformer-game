@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://bru0y1l5eay1w"]
-
-[ext_resource type="Script" uid="uid://bi2mhf0f2yjup" path="res://Scripts/decrase_hp.gd" id="1_2gtml"]
-
-[node name="DecraseHP" type="Area2D" unique_id=1915965102]
-collision_mask = 2
-script = ExtResource("1_2gtml")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
