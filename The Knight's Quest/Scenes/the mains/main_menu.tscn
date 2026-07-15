@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://cjhm3fjjen1nf"]
+
+[ext_resource type="Script" uid="uid://hl0ubkc8bpoj" path="res://Scripts/main_menu.gd" id="1_48xlc"]
+[ext_resource type="FontFile" uid="uid://b4llyodild42c" path="res://Assets/Fonts/ariblk.ttf" id="2_1ehe0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vkido"]
+draw_center = false
+border_color = Color(0.37413922, 0.37413934, 0.374139, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0.17497995, 0.7216035, 9.62615e-07, 1)
+border_width_left = 15
+border_width_bottom = 10
+border_color = Color(0.15487596, 0.154876, 0.15487596, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_offset = Vector2(15, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erv1k"]
+bg_color = Color(0.026881283, 0.21509337, 9.62615e-08, 1)
+border_width_left = 15
+border_width_bottom = 10
+border_color = Color(0.15487596, 0.154876, 0.15487596, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_offset = Vector2(15, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
+bg_color = Color(0.10872028, 0.49427253, 1.92523e-07, 1)
+border_width_left = 15
+border_width_bottom = 10
+border_color = Color(0.15487596, 0.154876, 0.15487596, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_offset = Vector2(15, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(1, 0.34060976, 0.30102998, 1)
+border_width_left = 15
+border_width_bottom = 10
+border_color = Color(0.15487596, 0.154876, 0.15487596, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_offset = Vector2(15, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+bg_color = Color(0.5063665, 0, 0.030311015, 1)
+border_width_left = 15
+border_width_bottom = 10
+border_color = Color(0.15487596, 0.154876, 0.15487596, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_offset = Vector2(15, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.7999278, 0, 0.07389704, 1)
+border_width_left = 15
+border_width_bottom = 10
+border_color = Color(0.15487596, 0.154876, 0.15487596, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_offset = Vector2(15, 15)
+
+[node name="MainMenu" type="Control" unique_id=1990363455]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_48xlc")
+
+[node name="Title" type="Label" parent="." unique_id=293283354]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -248.0
+offset_right = 310.0
+offset_bottom = -159.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.3180198, 0.31801978, 0.31801975, 0)
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_vkido")
+text = "The Knight's Quest"
+
+[node name="Buttons" type="Node" parent="." unique_id=2072681641]
+
+[node name="Play" type="Button" parent="Buttons" unique_id=1384933560]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.5
+offset_top = -87.0
+offset_right = 103.5
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_28flt")
+text = "PLAY"
+
+[node name="Exit" type="Button" parent="Buttons" unique_id=2096954146]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.5
+offset_top = 45.0
+offset_right = 103.5
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
+text = "Exit"
+
+[connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]

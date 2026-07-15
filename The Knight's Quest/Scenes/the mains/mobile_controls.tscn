@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dfkfgc27s2ufn"]
+
+[ext_resource type="Texture2D" uid="uid://dfpmbtedy71lq" path="res://Assets/Player Assets/Mobile Controls/Left_Button.png" id="1_wpvyt"]
+[ext_resource type="Texture2D" uid="uid://db1spmrvplskg" path="res://Assets/Player Assets/Mobile Controls/Left_Button_Pressed.png" id="2_p2iv7"]
+[ext_resource type="Texture2D" uid="uid://b6xbruq8n2btb" path="res://Assets/Player Assets/Mobile Controls/Right_Button.png" id="3_bexx6"]
+[ext_resource type="Texture2D" uid="uid://biurtc8gsmts0" path="res://Assets/Player Assets/Mobile Controls/Right_Button_Pressed.png" id="4_x7tv6"]
+[ext_resource type="Texture2D" uid="uid://bggebgnunciq0" path="res://Assets/Player Assets/Mobile Controls/Jump_Button.png" id="5_qqout"]
+[ext_resource type="Texture2D" uid="uid://dd40bjiekb6wl" path="res://Assets/Player Assets/Mobile Controls/Jump_Button_Pressed.png" id="6_sq50y"]
+[ext_resource type="Texture2D" uid="uid://cejvymlii0eif" path="res://Assets/Player Assets/Mobile Controls/icon_arrow.png" id="7_0xt73"]
+
+[node name="MobileControls" type="CanvasLayer" unique_id=1438196234]
+
+[node name="Left" type="TouchScreenButton" parent="." unique_id=1694224857]
+position = Vector2(91, 452)
+scale = Vector2(1.6832553, 1.6025512)
+texture_normal = ExtResource("1_wpvyt")
+texture_pressed = ExtResource("2_p2iv7")
+action = "Left"
+
+[node name="Right" type="TouchScreenButton" parent="." unique_id=332955679]
+position = Vector2(268, 452)
+scale = Vector2(1.6832556, 1.6025515)
+texture_normal = ExtResource("3_bexx6")
+texture_pressed = ExtResource("4_x7tv6")
+action = "Right"
+
+[node name="Jump" type="TouchScreenButton" parent="." unique_id=529503552]
+position = Vector2(908.00006, 416.99997)
+scale = Vector2(2.546874, 2.7343752)
+texture_normal = ExtResource("5_qqout")
+texture_pressed = ExtResource("6_sq50y")
+action = "Jump"
+
+[node name="TextureRect" type="TextureRect" parent="Jump" unique_id=1976473922]
+modulate = Color(0.52906674, 0.5290667, 0.5290667, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.759636
+offset_top = -9.937939
+offset_right = 26.606209
+offset_bottom = 24.096603
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 4.7183156
+texture = ExtResource("7_0xt73")
+expand_mode = 1

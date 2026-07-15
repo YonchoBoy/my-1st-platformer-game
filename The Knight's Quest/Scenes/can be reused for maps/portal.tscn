@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://hds6v0ruqsuv"]
+
+[ext_resource type="Script" uid="uid://bt0aiecylpkuw" path="res://Scripts/portal.gd" id="1_o2vkm"]
+[ext_resource type="Texture2D" uid="uid://bbgyy70er3tio" path="res://Assets/Map Assets/Portal assets/Portal sprite.png" id="2_beij6"]
+[ext_resource type="Texture2D" uid="uid://doex4jor0pkyu" path="res://Assets/Map Assets/Portal assets/GLOWING.png" id="3_beij6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(14.208391, 383.87103)
+
+[node name="Portal" type="Area2D" unique_id=446911410]
+scale = Vector2(1.478, 0.93)
+script = ExtResource("1_o2vkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=950200460]
+position = Vector2(-1.0148926, 0.5376129)
+scale = Vector2(1, 0.99999934)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=792527934]
+position = Vector2(-245.60214, 0)
+texture = ExtResource("2_beij6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1591604580]
+position = Vector2(-190.12177, -22.580645)
+scale = Vector2(0.7435723, 0.83010745)
+texture = ExtResource("3_beij6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
